@@ -8,7 +8,7 @@ gem "mongoid",            ">= 3.0.3"
 gem "bson_ext",           "~> 1.6.4"
 gem "devise",             ">= 2.1.2"
 gem "tire",               "~> 0.4.2"
-gem "slim",               "~> 1.2.2"
+gem "slim-rails",         "~> 1.0.3"
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
