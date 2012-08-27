@@ -7,6 +7,7 @@ gem 'unicorn',            '>= 4.3.1'
 gem 'mongoid',            '>= 3.0.3'
 gem 'bson_ext',           '~> 1.6.4'
 gem 'devise',             '>= 2.1.2'
+gem 'cancan',             '~> 1.6.8'
 gem 'tire',               '~> 0.4.2'
 gem 'slim-rails',         '~> 1.0.3'
 
