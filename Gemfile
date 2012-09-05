@@ -30,6 +30,8 @@ gem 'cucumber-rails',     '>= 1.3.0',  :group => :test, :require => false
 gem 'launchy',            '>= 2.1.2',  :group => :test
 gem 'guard-rspec',        '~> 1.2.1',  :group => [:development, :test]
 gem "pry-rails",          "~> 0.2.1",  :group => :development
+gem "hpricot",            ">= 0.8.6",  :group => :development
+gem "ruby_parser",        ">= 2.3.1",  :group => :development
 gem "erb2haml",                        :group => :development
 gem "haml2slim",          ">= 0.4.6",  :group => :development
 gem "haml-rails",         ">= 0.3.4",  :group => :development

@@ -4,6 +4,7 @@ require 'optparse'
 require 'find'
 require 'fileutils'
 require 'pry'
+require 'haml2slim'
 
 class Options
   attr_accessor :path
