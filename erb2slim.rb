@@ -4,7 +4,6 @@ require 'optparse'
 require 'find'
 require 'fileutils'
 require 'pry'
-require 'haml2slim'
 
 class Options
   attr_accessor :path
@@ -125,7 +124,8 @@ class Program
       @haml_files.each do |path|
         slim_path = path.slice(0...-4)+"slim"
         unless FileTest.exists?(slim_path)
-          Haml2Slim.convert! path
+          # Haml2Slim.convert!(path)
+          system("haml2slim", path)
         end
       end
     end

@@ -268,6 +268,7 @@ DEPENDENCIES
   guard-rspec (~> 1.2.1)
   haml-rails (>= 0.3.4)
   haml2slim (>= 0.4.6)
+  hpricot (>= 0.8.6)
   jbuilder
   jquery-rails
   launchy (>= 2.1.2)
@@ -278,6 +279,7 @@ DEPENDENCIES
   rb-fsevent
   rolify (>= 3.2.0)
   rspec-rails (>= 2.11.0)
+  ruby_parser (>= 2.3.1)
   sass-rails (~> 3.2.3)
   slim-rails (~> 1.0.3)
   tire (~> 0.4.2)
