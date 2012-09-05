@@ -1,7 +1,7 @@
 class User
   include Mongoid::Document
 
-  attr_accessible :email, :password, :password_confirmation, :remember_me
+  attr_accessible :name, :email, :password, :password_confirmation, :remember_me
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
