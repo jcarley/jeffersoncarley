@@ -23,7 +23,5 @@ end
 
 group :test do
   gem 'database_cleaner',   '>= 0.8.0'
-  gem 'email_spec',         '>= 1.2.1'
   gem 'capybara',           '>= 1.1.2'
 end
-
