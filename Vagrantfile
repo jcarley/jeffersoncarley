@@ -4,6 +4,7 @@
 Vagrant.configure("2") do |config|
 
   config.vm.box = "precise64_rbenv_bootstrapped"
+  config.vm.box_url = "https://dl.dropboxusercontent.com/u/11721015/vagrant/boxes/precise64_rbenv_bootstrapped.box"
 
   config.vm.network :forwarded_port, guest: 80, host: 8080, :auto => true
   config.vm.network :private_network, ip: "192.168.33.10"
