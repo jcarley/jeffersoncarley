@@ -4,7 +4,7 @@ node default {
     command => '/usr/bin/apt-get update'
   }
 
-  package { ["nodejs", "wget", "vim", "curl", "git-core"]:
+  package { ["nodejs", "vim", "curl", "git-core"]:
     ensure => present
   }
 

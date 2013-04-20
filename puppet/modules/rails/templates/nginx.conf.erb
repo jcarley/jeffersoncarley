@@ -19,7 +19,7 @@ http {
   client_body_temp_path /var/spool/nginx-client-body 1 2;
   client_max_body_size 100m;
 
-  include /opt/nginx/conf/mime.types;
+  include /etc/nginx/conf/mime.types;
 
   default_type application/octet-stream;
 
@@ -43,5 +43,5 @@ http {
   gzip_disable "MSIE [1-6].(?!.*SV1)";
   gzip_vary on;
 
-  include /opt/nginx/sites-enabled/*;
+  include /etc/nginx/conf/sites-enabled/*;
 }

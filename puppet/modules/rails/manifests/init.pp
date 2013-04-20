@@ -6,19 +6,19 @@ class rails {
   define app( $sitedomain ) {
     include rails
 
-    file { "/opt/nginx/sites-available/${name}.conf":
+    file { "/etc/nginx/conf/sites-available/${name}.conf":
       content => template("rails/app.conf.erb"),
-      require => File["/opt/nginx/sites-available"],
+      require => File["/etc/nginx/conf/sites-available"],
     }
 
-    file { "/opt/nginx/sites-enabled/${name}.conf":
+    file { "/etc/nginx/conf/sites-enabled/${name}.conf":
       ensure   => link,
-      target   => "/opt/nginx/sites-available/${name}.conf",
-      require  => File["/opt/nginx/sites-enabled"],
+      target   => "/etc/nginx/conf/sites-available/${name}.conf",
+      require  => File["/etc/nginx/conf/sites-enabled"],
       notify   => Exec["reload-nginx"],
     }
 
-    file { "/opt/nginx/conf/includes/${name}.conf":
+    file { "/etc/nginx/conf/includes/${name}.conf":
       source   => [ "puppet:///modules/rails/${name}.conf", "puppet:///modules/rails/empty.conf" ],
       notify   => Exec["reload-nginx"],
     }
