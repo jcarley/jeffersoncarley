@@ -10,6 +10,12 @@
 # http://github.com/RailsApps/rails3-application-templates/issues
 #----------------------------------------------------------------------------
 
+# puppet boxes
+*.box
+
+# vagrant files
+.vagrant/
+
 # bundler state
 /.bundle
 /vendor/bundle/
