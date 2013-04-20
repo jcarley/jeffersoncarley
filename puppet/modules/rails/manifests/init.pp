@@ -3,11 +3,6 @@
 class rails {
   include rails::passenger
 
-  package { "bundler":
-    provider => gem,
-    ensure   => installed,
-  }
-
   define app( $sitedomain ) {
     include rails
 

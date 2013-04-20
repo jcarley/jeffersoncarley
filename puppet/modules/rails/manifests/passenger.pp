@@ -9,6 +9,12 @@ class rails::passenger {
                               "libssl-dev"]
   package { $passenger_dependencies: ensure => installed }
 
+  exec { "install-bundler":
+    command => "${home}/.rbenv/versions/1.9.3-p392/bin/gem install bundler --no-ri --no-rdoc",
+    creates => "${home}/.rbenv/versions/1.9.3-p392/bin/bundle",
+    require => Package[$passenger_dependencies]
+  }
+
   exec { "install-passenger":
     command => "${home}/.rbenv/versions/1.9.3-p392/bin/gem install passenger --version=${passenger_version} --no-ri --no-rdoc",
     unless  => "${home}/.rbenv/versions/1.9.3-p392/bin/gem list | /bin/grep passenger | /bin/grep ${passenger_version}",
