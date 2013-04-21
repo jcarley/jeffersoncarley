@@ -7,6 +7,7 @@ gem 'cancan',             '~> 1.6.8'
 gem "rolify",             ">= 3.2.0"
 gem "draper",             "~> 0.17.0"
 gem 'slim-rails',         '~> 1.0.3'
+gem 'figaro'
 
 group :assets do
   gem 'sass-rails',       '~> 3.2.3'
