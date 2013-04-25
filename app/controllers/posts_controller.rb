@@ -4,4 +4,5 @@ class PostsController < ApplicationController
     template = params[:id]
     render :template => "articles/#{template}"
   end
+
 end
