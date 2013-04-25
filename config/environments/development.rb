@@ -1,4 +1,7 @@
 Jeffersoncarley::Application.configure do
+  Slim::Engine.set_default_options :shortcut => {'@' => {:attr => 'role'}, '#' => {:attr => 'id'}, '.' => {:attr => 'class'}}
+  Slim::Engine.set_default_options pretty: true, sort_attrs: false
+
   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on
