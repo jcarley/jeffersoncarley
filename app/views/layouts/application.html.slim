@@ -3,7 +3,7 @@ html
   head
     meta charset="utf-8"
 
-    title= content_for?(:title) ? yield(:title) : "Untitled"
+    title JeffersonCarley.com
 
     = stylesheet_link_tag "application"
     = javascript_include_tag "vendor/custom.modernizr"
@@ -12,12 +12,6 @@ html
   body
     .row
       .large-12.columns
-        .nav-bar.right
-          ul.button-group
-            li: a.button href="#" Link 1
-            li: a.button href="#" Link 2
-            li: a.button href="#" Link 3
-            li: a.button href="#" Link 4
         h1
           a href=root_path JeffersonCarley.com
         hr
@@ -25,26 +19,11 @@ html
     / <!-- Main Page Content and Sidebar -->
     .row
       / <!-- Main Blog Content -->
-      .large-9.columns@content
+      .large-12.columns@content
 
         == yield
 
       / <!-- End Main Content -->
-
-
-      / <!-- Sidebar -->
-
-      aside.large-3.columns
-
-        h5 Categories
-        ul.side-nav
-          li: a href="#" News
-          li: a href="#" Code
-          li: a href="#" Design
-          li: a href="#" Fun
-          li: a href="#" Weasels
-
-      / <!-- End Sidebar -->
 
     / <!-- End Main Content and Sidebar -->
 
@@ -57,12 +36,4 @@ html
         .row
           .large-6.columns
             p &copy; Copyright no one at all. Go to town.
-          .large-6.columns
-            ul.inline-list.right
-              li: a href="#" Link 1
-              li: a href="#" Link 2
-              li: a href="#" Link 3
-              li: a href="#" Link 4
-
-    = javascript_include_tag "application"
 
