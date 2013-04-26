@@ -1,10 +1,12 @@
 class HomeController < ApplicationController
 
   def index
-    @files = Dir.entries(File.join(Rails.root, "app/views/articles"))
-    @files = @files.map do |x|
-      x if x.index(/\.md$|\.markdown$/).present?
+    files = Dir.entries(File.join(Rails.root, "app/views/articles"))
+    posts = files.map do |x|
+      Post.new(x) if x.index(/\.md$|\.markdown$/).present?
     end
-    @files.compact!
+    posts.compact!
+
+    @decorator = PostDecorator.decorate(posts)
   end
 end
