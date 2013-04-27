@@ -9,6 +9,7 @@ gem "draper",             "~> 0.17.0"
 gem 'slim-rails',         '~> 1.0.3'
 gem 'figaro'
 gem 'redcarpet'
+gem 'puma'
 
 group :assets do
   gem 'sass-rails',       '~> 3.2.3'
