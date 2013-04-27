@@ -2,12 +2,8 @@ source 'https://rubygems.org'
 
 gem 'rails',              '3.2.13'
 gem 'jquery-rails'
-gem 'omniauth-twitter'
-gem 'cancan',             '~> 1.6.8'
-gem "rolify",             ">= 3.2.0"
 gem "draper",             "~> 0.17.0"
 gem 'slim-rails',         '~> 1.0.3'
-gem 'figaro'
 gem 'redcarpet'
 gem 'puma'
 
