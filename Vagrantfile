@@ -14,6 +14,8 @@ Vagrant.configure("2") do |config|
                   "--memory", "1024"]
   end
 
+  config.vm.synced_folder ".", "/vagrant", :nfs => true
+
   config.vm.provision :puppet do |puppet|
     puppet.module_path = "puppet/modules"
     puppet.manifests_path = "puppet/manifests"
