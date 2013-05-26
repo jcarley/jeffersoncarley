@@ -3,7 +3,7 @@
 
 Vagrant.configure("2") do |config|
 
-  config.vm.box = "precise64_rbenv_bootstrapped"
+  config.vm.box = "precise64"
   config.vm.box_url = "https://dl.dropboxusercontent.com/u/11721015/vagrant/boxes/precise64_rbenv_bootstrapped.box"
 
   config.vm.network :forwarded_port, guest: 80, host: 8080, :auto => true
@@ -14,10 +14,11 @@ Vagrant.configure("2") do |config|
                   "--memory", "1024"]
   end
 
-  config.vm.synced_folder ".", "/vagrant", :nfs => true
+  config.vm.synced_folder ".", "/home/vagrant/apps/jeffersoncarley", :nfs => true
 
   config.vm.provision :puppet do |puppet|
-    puppet.module_path = "puppet/modules"
+    # puppet.module_path = "puppet/modules"
+    puppet.module_path = "../server-provisioning/modules"
     puppet.manifests_path = "puppet/manifests"
     puppet.manifest_file  = "site.pp"
   end
